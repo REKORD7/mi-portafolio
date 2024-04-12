@@ -9,6 +9,7 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --color-footer: #757575;
 }
 
 body {
@@ -48,30 +49,32 @@ section.menu{
     align-items: center;
     height: 80px;
     padding: 0px 64px;
-    .menu__header{
-        display: flex;
-        flex-direction: row;
-        gap: 7px;
-        h3{
-            margin: 0px;
-        }
-    }
-    
-    .menu__list{
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .menu__list li:nth-child(6){
-        font-weight: 700;        
-    }
-
-    .menu__list__item__contato{
-        display: none;
-    }
 }
 
+.menu__header{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    
+}
+
+.menu__header h3{
+    margin: 0px;
+}
+
+.menu__list{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu__list li:nth-child(6){
+    font-weight: 700;        
+}
+
+.menu__list__item__contato{
+    display: none;
+}
 
 
 /*Sección Title*/
@@ -79,38 +82,39 @@ section.menu{
 section.title{
     padding: 32px 64px;
     align-items: center;
-    .title__div{
-        display: flex;
-        .title__container{
-            .title__bio{
-                font-size: 52px;
-                line-height: 61px;
-                font-weight: 700;
-            }
+}
 
-            .title__subsection{
-                font-size: 22px;
-                line-height: 25px;
-                font-weight: 400;
-            }
+.title__div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
-            .title__network{
-                width: 60%;
-                height: 24px;
-                display: flex;
-                flex-direction: row;
-                gap: 32px;
-                padding: 0px;
-                font-size: 16px;
-                font-weight: 500;
-            }
+.title__container{
+    width: 65%;
+}
 
-            
+.title__bio{
+    font-size: 52px;
+    line-height: 61px;
+    font-weight: 700;
+}
 
-        }
-    }
+.title__subsection{
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 400;
+}
 
-
+.title__network{
+    
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /*Sección About*/
@@ -142,7 +146,6 @@ section.skills{
 .skills__title{
     font-size: 32px;
     line-height: 37.5px;
-    align-items: center;
 }
 
 .skills__line{
@@ -187,7 +190,6 @@ section.hobbies{
 .hobbies__title{
     font-size: 32px;
     line-height: 37.5px;
-    align-items: center;
 }
 
 .hobbies__line{
@@ -231,7 +233,6 @@ section.academic{
 .academic__title{
     font-size: 32px;
     line-height: 37.5px;
-    align-items: center;
 }
 
 .academic__courses{
@@ -263,7 +264,82 @@ section.academic{
 /* experiencia*/
 
 section.experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 64px;
+    gap: 32px;
+}
 
+.experience__section__title{
+    text-align: center;
+    font-weight: 700;
+    size: 32x;
+    line-height: 37.5px;
+}
+
+.experiencie__box{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+}
+
+.experiencie__box:nth-child(3),
+.experiencie__box:nth-child(5){
+    flex-direction: row-reverse;
+}
+
+.experience__img{
+    width: 70%;
+}
+
+.experience__info{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience__title{
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #464646;
+}
+
+.experience__text{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #464646;
+}
+
+.experience__description{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1.5em;
+    font-size: 1em;
+    line-height: 18.7px;
+}
+
+.experience__description button{
+    width: 100%;
+    height: 67px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 1em;
+}
+
+.experiencia__button--repo{
+    background-color: none;
+    color: #2a7ae4;
+    border: 1px solid #2a7ae4;
+}
+.experience__button--demo{
+    background-color: #2a7ae4;
+    color: white;
 }
 
 /*Contacto*/
@@ -275,9 +351,31 @@ section.formcontato{
 /*footeer*/
 
 section.footer{
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-color: var(--color-footer);
+    height: 5vh;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 1rem;
 }
 
+.footer__rodape{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap: 5px;  
+}
+
+.footer__rodape p{
+    margin: 0;
+}
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
 
