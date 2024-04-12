@@ -18,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    padding: 0px 64px;
 }
 ol, ul,li {
     list-style: none;
@@ -44,13 +45,12 @@ https://en.bem.info/methodology/quick-start/*/
 section.menu{
     display: flex;
     justify-content: space-between;
-    padding: 0px 35px;
-
+    align-items: center;
+    height: 80px;
     .menu__header{
         display: flex;
         flex-direction: row;
-        gap: 5px;
-        align-items: center;
+        gap: 7px;
         h3{
             margin: 0px;
         }
@@ -62,8 +62,8 @@ section.menu{
         gap: 15px;
     }
 
-    .menu__list:nth-child(6) a{
-        font-weight: bold;        
+    .menu__list li:nth-child(6){
+        font-weight: 700;        
     }
 
     .menu__list__item__contato{
@@ -76,6 +76,39 @@ section.menu{
 /*Sección Title*/
 
 section.title{
+    align-items: center;
+    .title__div{
+        display: flex;
+        .title__container{
+
+            .title__bio{
+                font-size: 52px;
+                line-height: 61px;
+                font-weight: 700;
+            }
+
+            .title__subsection{
+                font-size: 22px;
+                line-height: 25px;
+                font-weight: 400;
+            }
+
+            .title__network{
+                width: 470px;
+                height: 24px;
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                padding: 0px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            
+
+        }
+    }
+
 
 }
 
