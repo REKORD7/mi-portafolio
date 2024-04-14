@@ -2,7 +2,7 @@
     /* Variables de colores */
    --cor-de-fondo: #B0BEC5;
    --cor-de-link: #000;
-   --color-footer: #757575;
+   --color-footer: #212121;
    --fondo-box: #17FC4F;
    --color-secundario: #78909C;
    --color-texto: #263238;
@@ -119,6 +119,7 @@ section.title{
 section.about{
     background: var(--color-secundario);
     padding: 64px;
+    box-shadow: 00px 0px 20px 4px rgba(0,0,0,0.75);
 }
 
 .about__container{
@@ -246,6 +247,7 @@ section.academic{
     align-items: center;
     padding: 32px 64px;
     background: var(--color-secundario);
+    box-shadow: 00px 0px 20px 4px rgba(0,0,0,0.75);
 }
 
 .academic__title{
@@ -487,6 +489,7 @@ section.footer{
     letter-spacing: 1px;
     font-weight: bold;
     padding: 1rem 0;
+    box-shadow: 00px 0px 20px 4px rgba(0,0,0,0.75);
 }
 
 .footer__rodape{
