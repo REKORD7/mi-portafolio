@@ -26,6 +26,11 @@ a{
     color: var(--cor-de-link);
 }
 
+/* Ajuste de margenes para monitores de mas de 1440 pixeles */
+.tudo{
+    padding: 0 calc(0px + (260 - 0) * ((100vw - 1440px) / (1920 - 1440)));
+}
+
 /*Sección Menu*/
 
 section.menu{
@@ -94,7 +99,6 @@ section.title{
 
 .title__subsection{
     font-size: 22px;
-    line-height: 25px;
     font-weight: 400;
     margin: 0;
 }
@@ -124,7 +128,7 @@ section.about{
 
 .about__container{
     color: var(--color-texto);
-    width: 70%;
+    width: 65%;
 }
 
 .about__title{
@@ -133,7 +137,7 @@ section.about{
     font-weight: 700;
 }
 
-.about__container p{
+.about__paragraph{
     text-align: justify;
 }
 
@@ -178,6 +182,7 @@ section.skills{
     transition: box-shadow 0.3s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     /* Aumenta la intensidad de la sombra al hacer hover */
+    background: linear-gradient(to left, white, var(--fondo-box));
 }
 
 .skills__box ul{
@@ -229,6 +234,7 @@ section.hobbies{
 .hobbies__box:hover {
     transition: box-shadow 0.3s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, white, var(--fondo-box));
     /* Aumenta la intensidad de la sombra al hacer hover */
 }
 
@@ -351,21 +357,66 @@ section.experience{
 }
 
 .experience__description button{
-    width: 100%;
+    position: relative;
+    display: block;
+    width: 100px;
     height: 67px;
+    border-radius: 1em;
     cursor: pointer;
     font-size: 1em;
-    border-radius: 1em;
+    transition: all 500ms ease;
+    overflow: hidden;
+}
+
+.experience__description button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: #20e2d7;
+    transition: all 500ms ease;
+    z-index: -1;
 }
 
 .experiencia__button--repo{
-    background-color: none;
+    background-color: transparent;
     color: #2a7ae4;
     border: 1px solid #2a7ae4;
 }
+
+.experiencia__button--repo::before{
+    width: 0;
+    height: 100%;
+}
+
+.experiencia__button--repo:hover {
+    color: #434343;
+}
+
+.experiencia__button--repo:hover::before{
+    width: 100%;
+}
+
 .experience__button--demo{
     background-color: #2a7ae4;
     color: white;
+}
+
+.experience__button--demo:hover{
+    background-color: #20e2d7;
+    box-shadow: 0 0 1px #20e2d7, 0 0 2px #20e2d7, 0 0 2px #20e2d7;
+    color: #434343;
+}
+
+@keyframes shadow-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
+    }
+    100% {
+      box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+    }
 }
 
 /*Contacto*/
@@ -464,15 +515,19 @@ section.formcontato{
     height: 51px;
     font-size: 16px;
     font-weight: normal;
-    background: blue;
+    background-color: blue;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
-    /* Agrega un margen superior */
-    align-self: center;
-    /* Centra horizontalmente */
+    align-self: center;    
+}
+
+.formcontato__button:hover{
+    animation: shadow-pulse 1000ms 1;
+    background-color: #20e2d7;
+    color: #434343;
 }
 
 /*footeer*/
@@ -550,7 +605,7 @@ section.title{
 
 .title__subsection{
     font-size: 1em;
-    line-height: 18px;
+    
     font-weight: 400;
 }
 
@@ -585,10 +640,10 @@ section.about{
     margin: 0;
 }
 
-.about__container p{
+.about__paragraph{
     font-size: 0.9em;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 1.5;
 }
 
 /*Skills*/
@@ -705,7 +760,7 @@ section.experience{
     width: 100%;
     height: 33px;
     cursor: pointer;
-    font-size: 0..9em;
+    font-size: 0.9em;
     border-radius: 1em;
 }
 
@@ -811,7 +866,6 @@ section.title{
 
 .title__subsection{
     font-size: 0.9em;
-    line-height: 16px;
     font-weight: 400;
 }
 
@@ -849,7 +903,6 @@ section.about{
 .about__container p{
     font-size: 0.9em;
     font-weight: 400;
-    line-height: 16px;
 }
 
 /*Skills*/
