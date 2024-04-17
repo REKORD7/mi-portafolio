@@ -38,16 +38,21 @@
             <div class="title__div">
                 <div class="title__container">
                     <h2 class="title__bio">Hola, mi nombre es Manuel Gómez y construyo paginas web</h2>
-                    <h3 class="title__subsection">Graduado en tecnologías de computación con especialidad en redes, actualmente adentrándome al mundo del desarrollo front-end a través de los cursos de Alura ONE.</h3>
+                    <h3 class="title__subsection" id="test">Graduado en tecnologías de computación con especialidad en redes, actualmente adentrándome al mundo del desarrollo front-end a través de los cursos de Alura ONE.</h3>
                     <ul class="title__network">
                         <!-- Pon los enlaces de tus redes sociales favoritas -->
-                        <li class="title__network__item"><a href="https://github.com/REKORD7">Github <img src="assets\arrow.png"> </a></li>
-                        <li class="title__network__item"><a href="https://www.linkedin.com/in/ing-manuel-gomez/">Linkedin <img src="assets\arrow.png"></a></li>
+                        <li class="title__network__item"><a href="https://github.com/REKORD7">Github <img src="assets/gitHub.png"> </a></li>
+                        <li class="title__network__item"><a href="https://www.linkedin.com/in/ing-manuel-gomez/">Linkedin <img src="assets/in_icon.png"></a></li>
                         <!-- <li class="title__network__item"><a href="">Instagram <img src="assets\arrow.png"></a></li> -->
-                        <li class="title__network__item"><a href="">Currículo <img src="assets\arrow.png"></a></li>
+                        <li class="title__network__item" id="btn_curriculo"><button id="btn_cv" onclick="show_cv()">Currículo <img id="arrow" src="assets\arrow.png"></button></li>
+                        <!-- <li class="title__network__item" ><a href="" >Currículo <img src="assets\arrow.png"></a></li>                         -->
                     </ul>
                 </div>
                 <img class="title__profile" src="assets\profile.png">
+            </div>
+            <div id="cv">
+                <hr division>
+                <embed src="docs/profile.pdf" type="application/pdf">
             </div>
         </section>
         
