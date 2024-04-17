@@ -1,0 +1,47 @@
+section.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-footer);
+    height: 5vh;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    box-shadow: 00px 0px 20px 4px rgba(0,0,0,0.75);
+}
+
+.footer__rodape{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+      
+}
+
+.footer__rodape p{
+    margin: 0;
+}
+
+/*Responsividad para Tablets y mobiles */
+
+
+/*Tablet*/
+@media (max-width: 900px){
+    section.footer{
+        font-size: .8em;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    .footer__rodape{
+        gap: 5px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 560px){
+    
+}
