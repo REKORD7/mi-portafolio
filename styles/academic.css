@@ -10,6 +10,7 @@ section.academic{
 .academic__title{
     font-size: 32px;
     line-height: 37.5px;
+    text-shadow: 1px 0px 0 white;
 }
 
 .academic__courses{

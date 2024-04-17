@@ -11,6 +11,7 @@ section.experience{
     font-weight: 700;
     size: 32x;
     line-height: 37.5px;
+    text-shadow: 1px 2px 0 white;
 }
 
 .experiencie__box{
