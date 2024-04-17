@@ -130,7 +130,7 @@ section.title{
         display: flex;
         flex-direction: row;
         gap: 4px;
-        padding: 0px;
+        padding: 1em;
         font-size: 0.9em;
         font-weight: 600;
     }
