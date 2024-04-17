@@ -6,8 +6,8 @@ var asunto = document.getElementById("asunto");
 var mensaje = document.getElementById("mensaje");
 var error = document.getElementById("error");
 error.style.color = "red";
-
 var form = document.getElementById('formulario');
+
 form.addEventListener('submit', function(event){
     
     event.preventDefault();
@@ -45,5 +45,21 @@ form.addEventListener('submit', function(event){
     }
 
     error.innerHTML = mensajesError.join(', ');
-    enviarFormulario();
-})
+});
+
+function show_cv() {
+    var cv = document.getElementById("cv");
+    var btn_cv = document.getElementById("btn_cv");
+    var img = document.getElementById("arrow");
+
+    if (cv.style.display == "none") {
+        cv.style.display = "block";
+        btn_cv.style.boxShadow = "inset 0px 0px 5px 3px rgba(0,0,0,0.75)"
+        img.src = "assets/arrow_down.png"
+    } else {
+        cv.style.display = "none";
+        btn_cv.style.background = "transparent";
+        btn_cv.style.boxShadow = "none"
+        img.src = "assets/arrow.png"
+    }
+};
