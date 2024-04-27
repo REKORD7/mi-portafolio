@@ -257,9 +257,18 @@
                     <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
                     <form class="formcontato__form" name="form" action="" id="formulario">
-                        <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre" id="nombre">
-                        <input class="formcontato__input" type="email" name="email" placeholder="E-mail" id="email">
-                        <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto" id="asunto">
+                        <div class="input_box">
+                            <input class="formcontato__input" type="text" name="nombre" id="nombre" required>
+                            <label for="nombre">Nombre: </label>
+                        </div>
+                        <div class="input_box">
+                            <input class="formcontato__input" type="email" name="email" id="email" required>
+                            <label for="email">E-mail: </label>
+                        </div>
+                        <div class="input_box">
+                            <input class="formcontato__input" type="text" name="asunto" id="asunto" required>
+                            <label for="asunto">Asunto: </label>
+                        </div>
                         <textarea class="formcontato__textarea" rows="5" cols="40" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
                         <button type="submit" class="formcontato__button" id="enviar">Enviar</button>
                     </form>
